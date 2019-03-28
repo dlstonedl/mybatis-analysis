@@ -15,11 +15,8 @@ public class MybatisAnalysis {
         InputStream inputStream = Resources.getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        try {
-            User user = sqlSession.selectOne("org.mybatis.example.analysis.selectUser", 1);
-            System.out.println(user);
-        }finally {
-            sqlSession.close();
-        }
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        User user = mapper.selectUser("1");
+        System.out.println(user);
     }
 }
