@@ -1,4 +1,4 @@
-package com.dlstone.mybatis.analysis;
+package com.dlstone.mybatis.analysis.sample;
 
 public class User {
     private int id;

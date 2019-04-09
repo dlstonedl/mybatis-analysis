@@ -1,4 +1,4 @@
-package com.dlstone.mybatis.analysis;
+package com.dlstone.mybatis.analysis.sample;
 
 import org.apache.ibatis.annotations.Param;
 

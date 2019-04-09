@@ -1,4 +1,4 @@
-package com.dlstone.mybatis.analysis;
+package com.dlstone.mybatis.analysis.sample;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.dlstone.mybatis.analysis.UserMapper">
+<mapper namespace="com.dlstone.mybatis.analysis.sample.UserMapper">
 
-    <select id="selectUser" resultType="com.dlstone.mybatis.analysis.User">
-    select * from user where id = #{id}
-  </select>
+    <select id="selectUser" resultType="com.dlstone.mybatis.analysis.sample.User">
+       select * from user where id = #{id}
+    </select>
 
 </mapper>
