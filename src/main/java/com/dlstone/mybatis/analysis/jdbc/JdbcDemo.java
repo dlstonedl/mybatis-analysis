@@ -1,5 +1,7 @@
 package com.dlstone.mybatis.analysis.jdbc;
 
+import com.dlstone.mybatis.analysis.sample.User;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -19,11 +21,8 @@ public class JdbcDemo {
 
         preparedStatement.execute();
         ResultSet result = preparedStatement.getResultSet();
-        while(result.next()) {
-            System.out.println(result.getInt("id"));
-            System.out.println(result.getString("username"));
-            System.out.println(result.getString("sex"));
-            System.out.println(result.getInt("age"));
-        }
+        ResultHandle<User> resultHandle = new ResultHandle<>(result, User.class);
+        User user = resultHandle.getResult();
+        System.out.println(user.toString());
     }
 }
