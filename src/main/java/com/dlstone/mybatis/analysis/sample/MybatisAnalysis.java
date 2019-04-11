@@ -17,8 +17,16 @@ public class MybatisAnalysis {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
             UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
             User user = mapper.selectUser("1");
             System.out.println(user);
+
+            User user1 = mapper.selectUserByNameAndSex("bbb", "female");
+            System.out.println(user1);
+
+            mapper.updateUser("1", "ccc");
+            User user2 = mapper.selectUser("1");
+            System.out.println(user2);
         } finally {
             sqlSession.close();
         }
